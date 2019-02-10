@@ -13,16 +13,10 @@ class Header extends Component {
         };  
     }
 
-    callBackFromCampaignFilter1 = (campaigns) => {
-        this.setState({ campaigns: campaigns });
-        this.props.HomeCallback(this.state.campaigns);
-    }
-
-    callBackFromCampaignFilter2 = (campaign) => {
+    callBackFromCampaignFilter = (campaign) => {
         this.setState({ currentCampaign: campaign });
         console.log("Header : ", campaign);
-
-        this.props.HomeCallback2(campaign);
+        this.props.HomeCallback(campaign);
     }
 
     render() {
@@ -30,9 +24,8 @@ class Header extends Component {
             <div className="row">
                 <div className="col-md-4">
                     <CampaignFilter 
-                        HeaderCallback={this.callBackFromCampaignFilter1}
-                        HeaderCallback2={this.callBackFromCampaignFilter2}
-                        />
+                        HeaderCallback={this.callBackFromCampaignFilter}
+                    />
                 </div>
                 <div className="col-md-4">
                     <PendingSearch/>

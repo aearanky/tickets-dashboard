@@ -14,7 +14,6 @@ class CampaignFilter extends Component {
       .then(response => response.json())
       .then(data => {
         this.setState({ campaigns: data.campaigns });
-        this.props.HeaderCallback(this.state.campaigns);
       })
       .catch(function (error) {
         console.log(error);
@@ -43,7 +42,7 @@ class CampaignFilter extends Component {
 
   render() {
     return (
-        <select onChange={ (ev) => this.props.HeaderCallback2(ev.target.value)}>
+        <select onChange={ (ev) => this.props.HeaderCallback(ev.target.value)}>
           {this.createCampaigns()}
         </select>
     );

@@ -12,11 +12,7 @@ class Home extends Component {
     };
   }
 
-  callBackFromHeader = (campaigns) => {
-    this.setState({ campaigns: campaigns });
-  }
-
-  callBackFromHeader2 = (campaign) => {
+  callBackFromHeader = (campaign) => {
     this.setState({ currentCampaign: campaign });
     console.log("Home Current camapaign : ", campaign);
   }
@@ -26,7 +22,6 @@ class Home extends Component {
       <div className="container">
         <Header
           HomeCallback={this.callBackFromHeader}
-          HomeCallback2={this.callBackFromHeader2}
         />
         <Cards
         currentCampaignId={this.state.currentCampaign}
