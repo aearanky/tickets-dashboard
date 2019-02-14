@@ -27,8 +27,7 @@ class Cards extends Component {
     makeCards(table, currentCard, index) {
 
         const progressBarStyle = {
-            'width': '70%',
-            'color': 'green'
+            'width': '90%',
         };
 
         table.push(
@@ -62,7 +61,7 @@ class Cards extends Component {
                             style={progressBarStyle}
                         >
                             <span className="sr-only">
-                                70% Complete
+                                90% Complete
                     </span>
                         </div>
                     </div>
@@ -72,7 +71,7 @@ class Cards extends Component {
                                 <FontAwesomeIcon icon="database" size="s" />
                             </div>
                             <div>
-                                {currentCard.listOfPlans[0].price.currencySymbol}15000
+                                $15000 
                             </div>
                         </div>
                         <div className="p-2 row">
@@ -80,7 +79,7 @@ class Cards extends Component {
                                 <FontAwesomeIcon icon="eye" size="s" />
                             </div>
                             <div>
-                                {currentCard.views}
+                                500
                             </div>
                         </div>
                         <div className="p-2 row">
@@ -88,7 +87,7 @@ class Cards extends Component {
                                 <FontAwesomeIcon icon="users" size="s" />
                             </div>
                             <div>
-                                {currentCard.subscribers}
+                                150K
                             </div>
                         </div>
                     </div>
