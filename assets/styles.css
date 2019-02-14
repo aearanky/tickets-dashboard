@@ -1,0 +1,81 @@
+/* Header elements */
+
+.Header {
+    margin-top: 10px;
+    background-color: lightgray;
+}
+
+select {
+    margin: 10px;
+    /* width: 200px; */
+    height: 35px;
+    opacity: 0.5;
+    color: black;
+    border-color: lightslategray;
+    background-color: lightgray;
+    padding-left: 10px;
+}
+
+.Pending {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: 1;
+    color: black;
+    border-color: grey;
+    opacity: 0.5;
+    width: 80%;
+}
+
+.Icon {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 17.5px;
+    color: grey;
+}
+
+.Calendar {
+    margin-top: 10px;
+    opacity: 0.5; 
+}
+
+.myCalendar {
+    height: 35px;
+}
+
+.Card {
+    margin-top: 15px;
+    margin-left: 75px;
+    border: 1px solid #000000;
+    padding: 0;
+}
+
+.CardDetails {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.CardTitle {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+    padding: 5px;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.progress-bar {
+    background-color: orangered;
+    height: 10px;
+    border-radius: 5px;
+    padding: 0;
+
+}
+
+.CardBottom {
+    padding-left: 10px;
+    padding-right: 10px;
+}

@@ -11,8 +11,8 @@ class Calendar extends Component {
     render() {
       return (
         <div>
-            <input type="date" name="bday" min="1000-01-01"
-            max="3000-12-31" className="form-control"></input>
+            <input type="date" min="1000-01-01"
+            max="3000-12-31" className="myCalendar"></input>
         </div>
         );
     }

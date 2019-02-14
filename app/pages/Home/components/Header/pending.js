@@ -6,7 +6,7 @@ class PendingSearch extends Component {
         <div className="row">
             <input
                 type="text"
-                placeholder="Pending search"
+                placeholder="Pending"
                 className="form-control"
                 />
             

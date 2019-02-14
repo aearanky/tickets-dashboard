@@ -12,9 +12,15 @@
     "build": "webpack --env.prod"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "axios": "^0.18.0",
     "bootstrap": "^4.2.1",
+    "font-awesome": "^4.7.0",
     "http-server": "^0.11.1",
+    "i": "^0.3.6",
+    "npm": "^6.8.0",
     "react": "15.3.0",
     "react-date-picker": "^7.2.0",
     "react-dom": "15.3.0",

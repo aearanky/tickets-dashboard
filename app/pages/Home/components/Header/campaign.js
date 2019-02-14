@@ -42,7 +42,7 @@ class CampaignFilter extends Component {
 
   render() {
     return (
-        <select onChange={ (ev) => this.props.HeaderCallback(ev.target.value)}>
+        <select onChange={ (ev) => this.props.HeaderCallback(ev.target.value)} className="">
           {this.createCampaigns()}
         </select>
     );

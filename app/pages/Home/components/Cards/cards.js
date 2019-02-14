@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDatabase, faUsers, faEye } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faDatabase, faUsers, faEye)
+
 
 class Cards extends Component {
 
@@ -20,67 +26,71 @@ class Cards extends Component {
 
     makeCards(table, currentCard, index) {
 
-        const divStyle = {
-            'marginTop': '15px',
-            'marginLeft': '20px',
-            'border': '1px solid #000000',
-            'paddingLeft': "5px",
-            'paddingRight': "5px",
-
-        };
-
-        const pStyle = {
-            'fontSize': '12px'
-        };
-
         const progressBarStyle = {
             'width': '70%',
             'color': 'green'
         };
 
         table.push(
-            <div className="col-md-3" style={divStyle} key={index}>
-                <div>
+            <div className="col-md-3 Card" key={index}>
+                <div className="Image">
                     <img src={currentCard.primaryMediaUrl}
                         width="100%"
                         height="100%">
                     </img>
                 </div>
-                <p style={pStyle}>
-                    {currentCard.cardTitle}
-                </p>
-                <div className="row d-flex">
-                    <div className="p-2">
-                        {currentCard.listOfPlans[0].price.currencySymbol}
-                        {currentCard.listOfPlans[0].price.amount} / Month
-                </div>
-                    <div className="p-2">
-                        {this.modifyState(currentCard, 'expired')}
+                <div className="CardDetails">
+                    <p className="CardTitle">
+                        {currentCard.cardTitle}
+                    </p>
+                    <div className="d-flex justify-content-between ">
+                        <div className="p-2">
+                            {currentCard.listOfPlans[0].price.currencySymbol}
+                            {currentCard.listOfPlans[0].price.amount} / Month
+                        </div>
+                        <div className="p-2">
+                            {this.modifyState(currentCard, 'expired')}
+                        </div>
                     </div>
-                </div>
-                <div className="progress">
-                    <div
-                        className="progress-bar"
-                        role="progressbar"
-                        aria-valuenow="70"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        style={progressBarStyle}
-                    >
-                        <span className="sr-only">
-                            70% Complete
+                    <div className="progress">
+                        <div
+                            className="progress-bar"
+                            role="progressbar"
+                            aria-valuenow="70"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            style={progressBarStyle}
+                        >
+                            <span className="sr-only">
+                                70% Complete
                     </span>
+                        </div>
                     </div>
-                </div>
-                <div className="row  d-flex">
-                    <div className="p-2">
-                        {currentCard.listOfPlans[0].price.currencySymbol} 15000
-                </div>
-                    <div className="p-2">
-                        {currentCard.views}
-                    </div>
-                    <div className="p-2">
-                        {currentCard.subscribers}
+                    <div className="d-flex justify-content-between CardBottom">
+                        <div className="p-2 row">
+                            <div>
+                                <FontAwesomeIcon icon="database" size="s" />
+                            </div>
+                            <div>
+                                {currentCard.listOfPlans[0].price.currencySymbol}15000
+                            </div>
+                        </div>
+                        <div className="p-2 row">
+                            <div>
+                                <FontAwesomeIcon icon="eye" size="s" />
+                            </div>
+                            <div>
+                                {currentCard.views}
+                            </div>
+                        </div>
+                        <div className="p-2 row">
+                            <div>
+                                <FontAwesomeIcon icon="users" size="s" />
+                            </div>
+                            <div>
+                                {currentCard.subscribers}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
